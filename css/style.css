@@ -6,70 +6,56 @@
 
 :root {
 
+    font-size: 100%; /* 16px */   
 
-font-size: 100%; /* 16px */   
+    /* Colors */
+    --yellow:hsl(47, 88%,63%);
+    --white:hsl(0,0%,100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
 
-/* Colors */
---yellow:hsl(47, 88%,63%);
---white:hsl(0,0%,100%);
---gray-500: hsl(0, 0%, 42%);
---gray-950: hsl(0, 0%, 7%);
+    /*  Typography */
+    /* text preset I  - Figtree extra bold*/
+    --h1-size:1.5rem; /* 24px */
+    --h1-weight:800;
+    --h1-line-height:1.5;
+    --h1-letter-spacing:0px;
 
-/*  Typography */
-/* text preset I  - Figtree extra bold*/
---h1-size:1.5rem; /* 24px */
---h1-weight:800;
---h1-line-height:1.5;
---h1-letter-spacing:0px;
+    /* text preset II  - Figtree medium*/
+    --p-size:1rem; /* 16px */
+    --p-weight:500;
+    --p-line-height:1.5;
+    --p-letter-spacing:0px;
 
-/* text preset II  - Figtree medium*/
---h2-size:1rem; /* 16px */
---h2-weight:500;
---h2-line-height:1.5;
---h2-letter-spacing:0px;
+    /* text preset III - Figtree medium*/
+    --h3-size:.875rem; /* 14px */
+    --h3-weight:500;
+    --h3-line-height:1.5;
+    --h3-letter-spacing:0px;
 
-/* text preset III - Figtree medium*/
---h3-size:.875rem; /* 14px */
---h3-weight:500;
---h3-line-height:1.5;
---h3-letter-spacing:0px;
+    /* text preset III Bold - Figtree extra bold */
+    --h3-bold-size:.875rem; /* 14px */
+    --h3-bold-weight:800;
+    --h3-bold-line-height:1.5;
+    --h3-bold-letter-spacing:0px;
 
-/* text preset III Bold - Figtree extra bold */
---h3-bold-size:.875rem; /* 14px */
---h3-bold-weight:800;
---h3-bold-line-height:1.5;
---h3-bold-letter-spacing:0px;
-
-/* Spacing */
-/* --spacing-300:1.5rem; 24px /300 */
---spacing-300:24px; /* 24px /300 */
---spacing-150:.75rem; /* 12px / 150 */
---spacing-100:.5rem;  /* 8px / 100 */
---spacing-50:.25rem; /* 4px / 50 */
-
-/* Font weight */
-/* --extra-bold:800; */
+    /* Spacing */
+    /* --spacing-300:1.5rem; 24px /300 */
+    --spacing-300:24px; /* 24px /300 */
+    --spacing-150:.75rem; /* 12px / 150 */
+    --spacing-100:.5rem;  /* 8px / 100 */
+    --spacing-50:.25rem; /* 4px / 50 */
 
 }
 
 
-/* hug  = height and wdith fit content OR to fill a contsiner use width 100% or
-flex grow:1; 
-if it is fixed then just set the height and width */
-/* fill = width 100 % , height 100% */
-
-/* ! maybe use line-height in just body */
-/* ! add readme file */
 body{
-    /* font-family: 'Figtree', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS'; */
     font-family: 'Figtree', sans-serif;
-    /* font-size: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; 
     background-color: var(--yellow);
-  /* flex-wrap: nowrap; */
     width: 100vw; /* Spans the screen width */
 }
 
@@ -81,34 +67,25 @@ body{
     border-radius: 20px;
     border: 1px solid var(--gray-950);
     filter: drop-shadow(4px 4px 0px var(--gray-950));
-    /* do i need box-sizing: border-box; */
-    /* box-sizing: content-box; */
-    
-    
     margin-left: 10px;
     margin-right: 10px;
-    /* stroke:hsl(0, 0%, 7%); */
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-    /* flex-wrap: wrap; */
-   flex: 1 1 auto; /* Grow proportionally, shrink proportionally */
-   min-width: 0;   /* Fixes the 'won't shrink past content size' bug */
-  /* padding: 15px; */
+    flex: 1 1 auto; /* Grow proportionally, shrink proportionally */
+    min-width: 0;   /* Fixes the 'won't shrink past content size' bug */
 }
 
 
-/* illustration */
 .illustration{
- display: flex;
- justify-self:center;
- border-radius: 10px;
- width: fill;
- height: 200px;
+    display: flex;
+    justify-self:center;
+    border-radius: 10px;
+    width: fill;
+    height: 200px;
 }
 
 /* middle div */
-
 .info-container{
     width: 100%;
     height: fit-content;
@@ -120,7 +97,6 @@ body{
 
 button.learn-btn{
     background-color: var(--yellow);
-    /*  4  12 */
     padding: var(--spacing-50) var(--spacing-150);
     border-radius: 4px;
     column-gap: var(--spacing-100);
@@ -132,73 +108,50 @@ button.learn-btn{
     height: fit-content;
     border: none;
     font-family: inherit;
-    /* font-size: clamp(.75rem, 2vw, var(--h3-bold-size)); */
     font-size: clamp(.75rem, 0.6393rem + 0.5574vw, var(--h3-bold-size));
     line-height: var(--h3-bold-line-height);
     font-weight: var(--h3-weight);
     letter-spacing: var(--h3-bold-letter-spacing);
-
-    /* font-size: clamp(.75rem, 2vw, .875rem); */
-    /* font-size: clamp(.75rem, 0.5rem + 2vw, .875rem); */
-    /* font-size: clamp(3rem 3.0vh 3rem); */
-    /* font-weight: 700; */
-    /* padding: 4px 12px 4px 12px; */
-    /* font-size: 14px; */
-    /* color:hsl(0, 0%, 7%); */
 }
 
+
+/* h3 */
 .publish-date{
     color: var(--gray-950);
     font-size: clamp(.75rem, 0.6393rem + 0.5574vw, var(--h3-size));
     line-height: var(--h3-line-height);
     font-weight: var(--h3-weight);
     letter-spacing: var(--h3-letter-spacing);
-
-    /* font-size: 14px; */
-    /* font-size: clamp(.75rem, 2vw, .875rem); */
     height: fit-content;
     width: fit-content;
     text-align: left;
 }
 
 
-/* h1{ */
+/* h1 */
 .title{
-    /* font-size: .24px; */
-    /* clamp(MIN, PREFERRED/SCALING, MAX) */
-    /* font-size: clamp(1rem, 2.5vw, 1.5rem);  */
     color: var(--gray-950);
-    /* font-size: clamp(1.25rem, 2.5vw, 1.5rem); */
-    /* font-size: clamp(1.25rem, 2.5vw, var(--h1-size)); */
-    /* font-size: clamp(1.25rem, 1.1786rem + 0.2232vw, var(--h1-size)); */
     font-size: clamp(1.25rem, 2.5vw, var(--h1-size));
     line-height: var(--h1-line-height);
     font-weight: var(--h1-weight);
-    letter-spacing: var(--h1-letter-spacing);
- 
-    /* font-size: 2vw; */
+    letter-spacing: var(--h1-letter-spacing); 
     height: fit-content;
     width: 100%;
     text-align: left;
 }
 
 .title:hover{
-    /* color:  hsl(47, 88%, 63%); */
     color:var(--yellow)
 }
 
-/* p{ */
+/* p */
 .description{
-    /* width: 100%; */
     width: auto;
     height: fit-content;
-    /* font-size: 16px; */
-    /* font-size: clamp(.875rem, 1.5vw, 1rem); */
-    font-size: clamp(.875rem, 1.5vw, var(--h2-size));
-    line-height: var(--h2-line-height);
-    font-weight: var(--h2-weight);
-    letter-spacing: var(--h2-letter-spacing);
- 
+    font-size: clamp(.875rem, 1.5vw, var(--p-size));
+    line-height: var(--p-line-height);
+    font-weight: var(--p-weight);
+    letter-spacing: var(--p-letter-spacing); 
     color: var(--gray-500);
     text-align: left;
 }
@@ -212,7 +165,6 @@ button.learn-btn{
    height: fit-content;
    width: fit-content;
    text-align: left;
-   /* column-gap: 12px; */
    column-gap: var(--spacing-150);
 }
 
@@ -223,12 +175,10 @@ button.learn-btn{
     object-fit: cover;
 }
 
-/* h4{ */
+/* h3 */
 .author-name{
     width: fit-content;
     height: fit-content;
-    /* font-size: 14px; */
-    /* font-size: clamp(.75rem, 2vw, .875rem); */
     font-size: clamp(.75rem, 2vw, var(--h3-bold-size));
     line-height: var(--h3-bold-line-height);
     font-weight: var(--h3-bold-weight);
@@ -239,144 +189,24 @@ button.learn-btn{
 }
 
 
-
-/* BELOW IS FOR FILL */
-/* .parent-container {
-  display: flex;
-  width: 100%; /* Or any fixed/max width */
-/* } */
-
-/* .child-text {
-  flex-grow: 1; /* This is the equivalent of Figma's "Fill Container" */
-  /* width: 100%;  Ensures it takes up the full flex space */
-/* } */ 
-
-/* To make font scale with contsiner use clamp */
-/* .child-text { */
-  /* Scales font size dynamically between 16px and 32px based on viewport */
-  /* font-size: clamp(1rem, 2vw, 2rem);  */
-/* } */
- 
-
-
-
-
-/* height: 501px; */
-/* @media screen and (max-width:480px ) { */
-/* 327 x 501 */
 @media screen and (max-width:395px ) {
-    .card-container{
-        /* background-color: aqua; */
-        max-width: 327px;
-        height: 501px;
-        /* max-height: fit-content; */
+.card-container{
+    max-width: 327px;
+    height: 501px;
     }
 
-    /* 279 x 200 */
-   /* .illustration-contianer{
-    background-color: bisque;
-    max-width: 279px;
-    height: 200px;
-   }  */
-
-   .illustration{
-    /* width: 100%; */
+.illustration{
     width:fill ;
     height: 100%;
     object-fit: cover;
    }
-
-    /* button.learn-btn{ */
-        /* font-weight:800; */
-        /* font-weight:var(--extra-bold); */
-    /* } */
-
-    /* .publish-date{ */
-        /* font-weight: 500; */
-        /* font-weight: var(--medium); */
-    /* } */
-
-    /* .title{ */
-        /* font-weight: 800; */
-        /* font-weight: var(--extra-bold); */
-    /* } */
-
-    /* .description{ */
-        /* font-weight: 500; */
-        /* font-weight: var(--medium); */
-        /* height: auto; */
-    /* } */
-
-    /* h1{
-    font-size: 20px;
-    font-size: clamp(.75rem, 2.5vw, 1.5rem); 
-    letter-spacing: 0;
-    } */
-
-/* button{
-    font-size: 12px;
-    font-weight: 800;
-    }
-
-h3{
-    font-size: 12px;
-    font-weight: 500;
-    } */
     
 }
 
 @media screen and (max-width:350px){
-    .illustration{
-        max-width: 279px;
+.illustration{
+    max-width: 279px;
     }
 
 }
 
-/* 
-@media screen and (max-width:188px){
-    
-        font-size: x-small;
-    }
-
-} */
-
-/* font-weight: 400; */
-/* @media screen and (max-width:118px){
-    
-        font-weight: var(--regular);
-    }
-
-    .illustration{
-        display: none;
-    }
-
-    .title{
-        font-weight: var(--regular);
-        font-size: x-small;
-    }
-
-    .author-container{
-        display: none;
-    }
-
-} */
-
-/* font-size: 16px; */
-/* color:  hsl(0, 0%, 42%); */
-/* @media screen and (max-width:365px ) {
-    .card{
-        background-color: blueviolet;
-        width: 200px;
-        height: 501px;
-    }
-
-    p{
-    width: fill;
-    height: fit-content;
-    font-size: 10px;
-    line-height: 150%;
-    color: white;
-    text-align: left;
-}
-    
-} */
