@@ -1,7 +1,7 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -9,23 +9,11 @@
 
 font-size: 100%; /* 16px */   
 
-    /* Colors */
+/* Colors */
 --yellow:hsl(47, 88%,63%);
 --white:hsl(0,0%,100%);
 --gray-500: hsl(0, 0%, 42%);
 --gray-950: hsl(0, 0%, 7%);
-/* --black:hsl(0,0%,0%); */
-
-
-
-/* font weights */
---light:300;
---regular:400;
---medium:500;
---semi-bold:600;
---bold:700;
---extra-bold:800;
---black:900;
 
 /*  Typography */
 /* text preset I  - Figtree extra bold*/
@@ -48,26 +36,19 @@ font-size: 100%; /* 16px */
 
 /* text preset III Bold - Figtree extra bold */
 --h3-bold-size:.875rem; /* 14px */
---h3-weight:800;
+--h3-bold-weight:800;
 --h3-bold-line-height:1.5;
 --h3-bold-letter-spacing:0px;
 
 /* Spacing */
---spacing-300:1.5rem; /* 24px /300 */
+/* --spacing-300:1.5rem; 24px /300 */
+--spacing-300:24px; /* 24px /300 */
 --spacing-150:.75rem; /* 12px / 150 */
 --spacing-100:.5rem;  /* 8px / 100 */
 --spacing-50:.25rem; /* 4px / 50 */
 
-
 }
 
-/* Light: 300
-Regular: 400
-Medium: 500
-Semi Bold: 600
-Bold: 700
-Extra Bold: 800
-Black: 900 */
 
 /* hug  = height and wdith fit content OR to fill a contsiner use width 100% or
 flex grow:1; 
@@ -76,57 +57,49 @@ if it is fixed then just set the height and width */
 
 /* ! maybe use line-height in just body */
 /* ! add readme file */
-/* ! add attribution */
 body{
-    font-family: 'Figtree', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    /* font-family: 'Figtree', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS'; */
+    font-family: 'Figtree', sans-serif;
     /* font-size: 10px; */
-    /* background-color: hsl(47, 88%, 63%); */
-    background-color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
-    /* .flex-container { */
-  /* display: flex; */
-  flex-wrap: nowrap;
-  width: 100%; /* Spans the screen width */
-/* } */
+    height: 100vh; 
+    background-color: var(--yellow);
+  /* flex-wrap: nowrap; */
+    width: 100vw; /* Spans the screen width */
 }
 
 .card-container{
-    margin-left: 10px;
-    margin-right: 10px;
-    /* box-sizing: border-box; */
-    /* background-color: hsl(0, 0%, 100%); */
     background-color: var(--white);
+    padding: var(--spacing-300);
     max-width: 384px;
     max-height: 522px;
     border-radius: 20px;
-    /* border: 1px solid hsl(0, 0%, 0%); */
-    border: 1px solid var(--black);
-    padding: 24px;
+    border: 1px solid var(--gray-950);
+    filter: drop-shadow(4px 4px 0px var(--gray-950));
+    /* do i need box-sizing: border-box; */
+    
+    
+    margin-left: 10px;
+    margin-right: 10px;
     /* stroke:hsl(0, 0%, 7%); */
-    stroke: var(--gray-950);
-    stroke-width: 1px;
-    /* filter: drop-shadow(4px 4px 0px hsl(0, 0%, 0%)); */
-    filter: drop-shadow(4px 4px 0px var(--black));
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-   /* .flex-item { */
    flex: 1 1 auto; /* Grow proportionally, shrink proportionally */
    min-width: 0;   /* Fixes the 'won't shrink past content size' bug */
   /* padding: 15px; */
-/* } */
 }
 
 
 /* illustration */
-
 .illustration{
  display: flex;
  justify-self:center;
  border-radius: 10px;
+ width: fill;
+ height: 200px;
 }
 
 /* middle div */
@@ -141,38 +114,44 @@ body{
 
 
 button.learn-btn{
-    /* background-color: hsl(47, 88%, 63%); */
     background-color: var(--yellow);
+    padding: var(--spacing-50) var(--spacing-150);
+    border-radius: 4px;
+    column-gap: var(--spacing-100);
+    
+    /* text  */
+    color:var(--gray-950);
     text-align: center;
     width: fit-content;
     height: fit-content;
-    /* color:hsl(0, 0%, 7%); */
-    color:var(--gray-950);
-    padding: 4px 12px 4px 12px;
     border: none;
-    border-radius: 4px;
-    /* font-size: 14px; */
-     font-family: inherit;
-      /* font-size: clamp(.75rem, 0.5rem + 2vw, .875rem); */
-      font-size: clamp(.75rem, 2vw, .875rem);
+    font-family: inherit;
+    /* font-size: clamp(.75rem, 2vw, var(--h3-bold-size)); */
+    font-size: clamp(.75rem, 0.6393rem + 0.5574vw, var(--h3-bold-size));
+    line-height: var(--h3-bold-line-height);
+    font-weight: var(--h3-weight);
+    letter-spacing: var(--h3-bold-letter-spacing);
+
+    /* font-size: clamp(.75rem, 2vw, .875rem); */
+    /* font-size: clamp(.75rem, 0.5rem + 2vw, .875rem); */
     /* font-size: clamp(3rem 3.0vh 3rem); */
-    line-height: 150%;
     /* font-weight: 700; */
-    font-weight: var(--bold);
+    /* padding: 4px 12px 4px 12px; */
+    /* font-size: 14px; */
+    /* color:hsl(0, 0%, 7%); */
 }
 
-/* h3{ */
 .publish-date{
-    /* color:hsl(0, 0%, 7%); */
     color: var(--gray-950);
+    font-size: clamp(.75rem, 0.6393rem + 0.5574vw, var(--h3-size));
+    line-height: var(--h3-line-height);
+    font-weight: var(--h3-weight);
+    letter-spacing: var(--h3-letter-spacing);
+
     /* font-size: 14px; */
-    font-size: clamp(.75rem, 2vw, .875rem);
-    /* font-weight: 400; */
-    font-weight: var(--regular);
+    /* font-size: clamp(.75rem, 2vw, .875rem); */
     height: fit-content;
     width: fit-content;
-    text-align: left;
-    line-height: 150%;
     text-align: left;
 }
 
@@ -182,13 +161,19 @@ button.learn-btn{
     /* font-size: .24px; */
     /* clamp(MIN, PREFERRED/SCALING, MAX) */
     /* font-size: clamp(1rem, 2.5vw, 1.5rem);  */
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem); 
+    color: var(--gray-950);
+    /* font-size: clamp(1.25rem, 2.5vw, 1.5rem); */
+    /* font-size: clamp(1.25rem, 2.5vw, var(--h1-size)); */
+    /* font-size: clamp(1.25rem, 1.1786rem + 0.2232vw, var(--h1-size)); */
+    font-size: clamp(1.25rem, 2.5vw, var(--h1-size));
+    line-height: var(--h1-line-height);
+    font-weight: var(--h1-weight);
+    letter-spacing: var(--h1-letter-spacing);
+ 
     /* font-size: 2vw; */
-    /* font-weight: 800; */
     height: fit-content;
     width: 100%;
     text-align: left;
-    line-height: 150%;
 }
 
 .title:hover{
@@ -202,12 +187,14 @@ button.learn-btn{
     width: auto;
     height: fit-content;
     /* font-size: 16px; */
-    font-size: clamp(.875rem, 1.5vw, 1rem);
-    line-height: 150%;
-    /* color:  hsl(0, 0%, 42%); */
+    /* font-size: clamp(.875rem, 1.5vw, 1rem); */
+    font-size: clamp(.875rem, 1.5vw, var(--h2-size));
+    line-height: var(--h2-line-height);
+    font-weight: var(--h2-weight);
+    letter-spacing: var(--h2-letter-spacing);
+ 
     color: var(--gray-500);
     text-align: left;
-    letter-spacing: 0;
 }
 
 
@@ -219,15 +206,14 @@ button.learn-btn{
    height: fit-content;
    width: fit-content;
    text-align: left;
-   column-gap: 12px;
-   /* color:hsl(0, 0%, 7%); */
-   color:var(--gray-950);
+   /* column-gap: 12px; */
+   column-gap: var(--spacing-150);
 }
 
 .author-img{
-    /* ! maybe use border radiuus to make circle */
     width: 32px;
     height: 32px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -236,12 +222,12 @@ button.learn-btn{
     width: fit-content;
     height: fit-content;
     /* font-size: 14px; */
-    font-size: clamp(.75rem, 2vw, .875rem);
-    line-height: 150%;
-    /* color:hsl(0, 0%, 7%); */
+    /* font-size: clamp(.75rem, 2vw, .875rem); */
+    font-size: clamp(.75rem, 2vw, var(--h3-bold-size));
+    line-height: var(--h3-bold-line-height);
+    font-weight: var(--h3-bold-weight);
+    letter-spacing: var(--h3-bold-letter-spacing);
     color: var(--gray-950);
-    /* font-weight: 700; */
-    font-weight: var(--bold);
     display: inline;
     text-align: left;
 }
