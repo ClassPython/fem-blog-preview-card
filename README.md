@@ -10,7 +10,7 @@ This was a basic challenge requiring only css and HTML knowledge.
 
 ### Screenshot
 
-![Preview of solution for the Blog preview card coding challenge](./images/sceenshot.jpg)
+![Preview of solution for the Blog preview card coding challenge](./images/screenshot.jpg)
 
 
 ### Links
