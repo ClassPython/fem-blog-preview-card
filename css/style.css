@@ -47,6 +47,9 @@ font-size: 100%; /* 16px */
 --spacing-100:.5rem;  /* 8px / 100 */
 --spacing-50:.25rem; /* 4px / 50 */
 
+/* Font weight */
+/* --extra-bold:800; */
+
 }
 
 
@@ -79,6 +82,7 @@ body{
     border: 1px solid var(--gray-950);
     filter: drop-shadow(4px 4px 0px var(--gray-950));
     /* do i need box-sizing: border-box; */
+    /* box-sizing: content-box; */
     
     
     margin-left: 10px;
@@ -87,6 +91,7 @@ body{
     display: flex;
     flex-direction: column;
     row-gap: 24px;
+    /* flex-wrap: wrap; */
    flex: 1 1 auto; /* Grow proportionally, shrink proportionally */
    min-width: 0;   /* Fixes the 'won't shrink past content size' bug */
   /* padding: 15px; */
@@ -115,6 +120,7 @@ body{
 
 button.learn-btn{
     background-color: var(--yellow);
+    /*  4  12 */
     padding: var(--spacing-50) var(--spacing-150);
     border-radius: 4px;
     column-gap: var(--spacing-100);
@@ -257,34 +263,49 @@ button.learn-btn{
 
 /* height: 501px; */
 /* @media screen and (max-width:480px ) { */
+/* 327 x 501 */
 @media screen and (max-width:395px ) {
     .card-container{
-        background-color: aqua;
-        /* max-width: 327px; */
+        /* background-color: aqua; */
+        max-width: 327px;
+        height: 501px;
         /* max-height: fit-content; */
     }
 
-    button.learn-btn{
+    /* 279 x 200 */
+   /* .illustration-contianer{
+    background-color: bisque;
+    max-width: 279px;
+    height: 200px;
+   }  */
+
+   .illustration{
+    /* width: 100%; */
+    width:fill ;
+    height: 100%;
+    object-fit: cover;
+   }
+
+    /* button.learn-btn{ */
         /* font-weight:800; */
-        font-weight:var(--extra-bold);
-    }
+        /* font-weight:var(--extra-bold); */
+    /* } */
 
-    .publish-date{
+    /* .publish-date{ */
         /* font-weight: 500; */
-        font-weight: var(--medium);
+        /* font-weight: var(--medium); */
+    /* } */
 
-    }
-
-    .title{
+    /* .title{ */
         /* font-weight: 800; */
-        font-weight: var(--extra-bold);
-    }
+        /* font-weight: var(--extra-bold); */
+    /* } */
 
-    .description{
+    /* .description{ */
         /* font-weight: 500; */
-        font-weight: var(--medium);
-        height: auto;
-    }
+        /* font-weight: var(--medium); */
+        /* height: auto; */
+    /* } */
 
     /* h1{
     font-size: 20px;
@@ -304,16 +325,24 @@ h3{
     
 }
 
-@media screen and (max-width:188px){
-    *{
-        font-size: x-small;
+@media screen and (max-width:350px){
+    .illustration{
+        max-width: 279px;
     }
 
 }
 
-@media screen and (max-width:118px){
-    *{
-        /* font-weight: 400; */
+/* 
+@media screen and (max-width:188px){
+    
+        font-size: x-small;
+    }
+
+} */
+
+/* font-weight: 400; */
+/* @media screen and (max-width:118px){
+    
         font-weight: var(--regular);
     }
 
@@ -322,7 +351,6 @@ h3{
     }
 
     .title{
-        /* font-weight: 400; */
         font-weight: var(--regular);
         font-size: x-small;
     }
@@ -331,7 +359,7 @@ h3{
         display: none;
     }
 
-}
+} */
 
 /* font-size: 16px; */
 /* color:  hsl(0, 0%, 42%); */
