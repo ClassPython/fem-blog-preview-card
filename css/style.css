@@ -40,7 +40,6 @@
     --h3-bold-letter-spacing:0px;
 
     /* Spacing */
-    /* --spacing-300:1.5rem; 24px /300 */
     --spacing-300:24px; /* 24px /300 */
     --spacing-150:.75rem; /* 12px / 150 */
     --spacing-100:.5rem;  /* 8px / 100 */
@@ -71,7 +70,7 @@ body{
     margin-right: 10px;
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
+    row-gap: var(--spacing-300);
     flex: 1 1 auto; /* Grow proportionally, shrink proportionally */
     min-width: 0;   /* Fixes the 'won't shrink past content size' bug */
 }
@@ -95,7 +94,7 @@ body{
 }
 
 
-button.learn-btn{
+span.learn-btn{
     background-color: var(--yellow);
     padding: var(--spacing-50) var(--spacing-150);
     border-radius: 4px;
@@ -110,12 +109,12 @@ button.learn-btn{
     font-family: inherit;
     font-size: clamp(.75rem, 0.6393rem + 0.5574vw, var(--h3-bold-size));
     line-height: var(--h3-bold-line-height);
-    font-weight: var(--h3-weight);
+    font-weight: var(--h3-bold-weight);
     letter-spacing: var(--h3-bold-letter-spacing);
 }
 
 
-/* h3 */
+/* p */
 .publish-date{
     color: var(--gray-950);
     font-size: clamp(.75rem, 0.6393rem + 0.5574vw, var(--h3-size));
@@ -141,7 +140,8 @@ button.learn-btn{
 }
 
 .title:hover{
-    color:var(--yellow)
+    color:var(--yellow);
+    cursor: pointer;
 }
 
 /* p */
@@ -196,8 +196,6 @@ button.learn-btn{
     }
 
 .illustration{
-    width:fill ;
-    height: 100%;
     object-fit: cover;
    }
     
