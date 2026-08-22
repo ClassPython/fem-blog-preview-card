@@ -4,7 +4,7 @@
 
 This challenge was to build and deploy Frontend Mentor's Blog preview card challenge.  Frontend Mentor provided various assets including the images, figma file, and style guide.
 
-[Frontend Mentor Blog preview card challenge](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
+[Frontend Mentor Blog preview card challenge](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
 This was a basic challenge requiring only css and HTML knowledge.
 
@@ -15,8 +15,8 @@ This was a basic challenge requiring only css and HTML knowledge.
 
 ### Links
 
-- Solution URL: [github repository](https://github.com/ClassPython/fem-qr-code-component)
-- Live Site URL: [github-pages]( https://classpython.github.io/fem-qr-code-component/)
+- Solution URL: [github repository](https://github.com/ClassPython/fem-blog-preview-card)
+- Live Site URL: [github-pages]( https://classpython.github.io/fem-blog-preview-card/)
 
 ### Built with
 
